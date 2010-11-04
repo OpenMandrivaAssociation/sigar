@@ -17,7 +17,7 @@ Name:		%{name}
 Group:		Monitoring
 Summary:	System Information Gatherer And Reporter
 Version:	1.6.3.%{gitdate}
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL
 URL:		http://support.hyperic.com/display/SIGAR/Home
 Source0:	%{name}.tar.bz2
