@@ -17,11 +17,10 @@ Name:		%{name}
 Group:		Monitoring
 Summary:	System Information Gatherer And Reporter
 Version:	1.6.3.%{gitdate}
-Release:	%mkrel 3
+Release:	4
 License:	GPL
 URL:		http://support.hyperic.com/display/SIGAR/Home
 Source0:	%{name}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:	valgrind
 %py_requires	-d
@@ -42,7 +41,7 @@ such as:
 %package	-n %{libname}
 Group:		System/Libraries
 Summary:	System Information Gatherer And Reporter
-Provides:	lib%{name} = %{version}-%{release}
+Provides:	lib%{name} = %{EVRD}
 
 %description	-n %{libname}
 The Sigar API provides a portable interface for gathering system information
@@ -82,7 +81,6 @@ such as:
 %files		-n %{devname}
 %defattr(-,root,root)
 %{_includedir}/*.h
-%{_libdir}/libsigar.la
 %{_libdir}/libsigar.so
 
 #-----------------------------------------------------------------------
@@ -127,5 +125,19 @@ pushd bindings/python
 popd
 
 #------------------------------------------------------------------------
-%clean
-rm -rf %{buildroot}
+
+
+%changelog
+* Thu Nov 04 2010 Paulo Andrade <pcpa@mandriva.com.br> 1.6.3.20100329-3mdv2011.0
++ Revision: 593513
++ rebuild (emptylog)
+
+* Mon Apr 05 2010 Paulo Andrade <pcpa@mandriva.com.br> 1.6.3.20100329-2mdv2010.1
++ Revision: 531856
++ rebuild (emptylog)
+
+* Tue Mar 30 2010 Paulo Andrade <pcpa@mandriva.com.br> 1.6.3.20100329-1mdv2010.1
++ Revision: 528939
+- Import sigar 1.6.3+ (git version)
+- sigar
+
