@@ -19,7 +19,7 @@ Summary:	System Information Gatherer And Reporter
 Version:	1.6.3.%{gitdate}
 Release:	5
 License:	GPL
-URL:		http://support.hyperic.com/display/SIGAR/Home
+URL:		https://support.hyperic.com/display/SIGAR/Home
 Source0:	%{name}.tar.bz2
 
 BuildRequires:	valgrind
