@@ -22,6 +22,11 @@ License:	GPL
 URL:		https://support.hyperic.com/display/SIGAR/Home
 Source0:	%{name}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	valgrind
 %py_requires	-d
 
